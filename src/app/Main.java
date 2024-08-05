@@ -9,19 +9,15 @@ public class Main {
 
         UserRepository repository = new UserRepository();
 
-/*User user=new User(01,"Ella","ella@gmail.com");
-User user1=new User(02,"Oleg","oleg@gmail.com");
-User user2=new User(03,"Yevgen","yevgen@gmail.com");
-User user3=new User(04,"Julia","julia@gmail.com");*/
-// Додаємо користувачей до списку List
-       repository.addUserList(new User(01,"Ella","ella@gmail.com"));
-        repository.addUserList(new User(02,"Oleg","oleg@gmail.com"));
-        repository.addUserList(new User(03,"Yevgen","yevgen@gmail.com"));
-        repository.addUserList(new User(04,"Julia","julia@gmail.com"));
+
+       repository.addUserList(new User(21,"Ella","ella@gmail.com"));
+        repository.addUserList(new User(12,"Oleg","oleg@gmail.com"));
+        repository.addUserList(new User(88,"Yevgen","yevgen@gmail.com"));
+        repository.addUserList(new User(16,"Julia","julia@gmail.com"));
 
         // Пошук користувача за id
 
-        Optional<User> userById = repository.findUserById(03);
+        Optional<User> userById = repository.findUserById(88);
         userById.ifPresent(user -> System.out.println("Found user by ID: " + user));
         userById.orElseGet(() -> {
             System.out.println("User not found by ID");
